@@ -11,6 +11,8 @@ class EventManager:
             self.events = []
             self.user_learning_plan = []
             self.merge_sorter = MergeSort()
+            # To load data from json and put it in init
+            self.load_events_from_json()
     def load_events_from_json(self):
             # Check if the Path of this fileName in the Same path of the project 
             if not os.path.exists(self.filename):
@@ -42,7 +44,7 @@ class EventManager:
                 events_to_display = self.events
                 title = "All Available Workshops & Events"
             else:
-                # List Comprehension create list from arealy anther list 
+                # List Comprehension create list from arealy another list
                 events_to_display = [e for e in self.events if e.category.lower() == category_name.lower()]
                 title = f" Filtered Events for Category: '{category_name.capitalize()}'"
     

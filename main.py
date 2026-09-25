@@ -1,10 +1,13 @@
+# ============================================================================
+# Imports
+# ============================================================================
 from eventManger import EventManager
-from learninigPaln import LearningPaln
+from learninigPlan import LearningPlan
 from sorting_algorithms import MergeSort
-
+# ====================================================================================================
 def main():
     manager = EventManager("events.json")
-    my_plan = LearningPaln()
+    my_plan = LearningPlan()
     merge_sorter = MergeSort()
     
     while True:
@@ -54,22 +57,13 @@ def main():
         elif choice == '5':
             manager.display_events()
             event_name = input("Enter the exact name of the event to add: ").strip()
-
-            found_event = None
-            for event in manager.events:
-                if event.name.lower() == event_name.lower():
-                    found_event = event
-                    break
-            
-            if found_event:
-                my_plan.add_event(found_event)
-            else:
-                print(f"Error: Event '{event_name}' not found.")
+            event_name = event_name.lower()
+            my_plan.add_to_learning_plan(event_name)
                 
         elif choice == '6':
             my_plan.display_learning_plan()
             event_name = input("Enter the exact name of the event to remove: ").strip()
-            my_plan.remove_event(event_name)
+            my_plan.remove_from_learning_plan(event_name)
             
         elif choice == '7':
             my_plan.display_learning_plan()
