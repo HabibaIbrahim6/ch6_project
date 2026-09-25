@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Ahmed",
+        "email": "ahmed@gmail.com",
+        "phone": "01254487956",
+        "age": 19,
+        "gender": "male",
+        "governorate": "CAIRO",
+        "national_id": "14978635412678",
+        "password": "123456789",
+        "role": "user"
+    },
+    {
+        "name": "Steven",
+        "email": "steven@gmail.com",
+        "phone": "011549753594",
+        "age": 20,
+        "gender": "male",
+        "governorate": "CAIRO",
+        "national_id": "14678943256741",
+        "password": "123456789",
+        "role": "user"
+    },
+    {
+        "name": "Habiba",
+        "email": "habiba@gmail.com",
+        "phone": "015487952486",
+        "age": 20,
+        "gender": "female",
+        "governorate": "CAIRO",
+        "national_id": "15234794168745",
+        "password": "123456789",
+        "role": "user"
+    },
+    {
+        "name": "Admin",
+        "email": "admin@gmail.com",
+        "phone": "01065498745615",
+        "age": 33,
+        "gender": "male",
+        "governorate": "CAIRO",
+        "national_id": "16579430247861",
+        "password": "admin123",
+        "role": "admin"
+    }
+]
