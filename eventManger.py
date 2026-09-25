@@ -37,11 +37,12 @@ class EventManager:
             except Exception as e:
                 print(f" Error loading JSON file: {e}")
                 
-    def display_events(self, category_name=None):
+    def display_events(self, category_name=None): # self refer to the object that call this function
             if category_name is None:
                 events_to_display = self.events
                 title = "All Available Workshops & Events"
             else:
+                # List Comprehension create list from arealy anther list 
                 events_to_display = [e for e in self.events if e.category.lower() == category_name.lower()]
                 title = f" Filtered Events for Category: '{category_name.capitalize()}'"
     

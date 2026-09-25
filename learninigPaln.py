@@ -1,23 +1,28 @@
-from event import Event
-from sorting_algorithms import MergeSort
+class LearningPlan:
 
-class LearningPaln:
-        
-    def __init__(self):
+    def __init__(self, events):
+        self.events = events
         self.user_learning_plan = []
-        
-        
+
     def add_to_learning_plan(self, event_name):
         for event in self.events:
             if event.name.lower() == event_name.lower():
+
                 if event not in self.user_learning_plan:
                     self.user_learning_plan.append(event)
-                    print(f" Success: '{event.name}' has been added to your Learning Plan.")
+                    print(
+                        f"Success: '{event.name}' "
+                        "has been added to your Learning Plan."
+                    )
                 else:
-                    print(f" Note: '{event.name}' is already in your learning plan.")
-                return
-        print(f" Error: Event '{event_name}' not found.")
+                    print(
+                        f"Note: '{event.name}' "
+                        "is already in your learning plan."
+                    )
 
+                return
+        print(f"Error: Event '{event_name}' not found.")
+        
     def remove_from_learning_plan(self, event_name):
         for event in self.user_learning_plan:
             if event.name.lower() == event_name.lower():
@@ -25,12 +30,13 @@ class LearningPaln:
                 print(f" Success: '{event.name}' has been removed from your plan.")
                 return
         print(f" Error: '{event_name}' was not found in your learning plan.")
+        
     def display_learning_plan(self):
         if not self.user_learning_plan:
             print("\n Your Learning Plan is currently empty.")
             return
 
-        print("\n---  Your Personal Learning Plan ---")
+        print("\n    Your Personal Learning Plan    ")
         counter = 1
         for event in self.user_learning_plan:
             print(f"{counter}. {event}")
@@ -38,10 +44,10 @@ class LearningPaln:
             
    
     def calculate_total_cost(self, plan=None):
-        # the Base Case  
         if plan is None:
             plan = self.user_learning_plan
-            
+        # if the plan is Empty 
+        # the Base Case 
         if not plan:
             return 0
             
@@ -52,7 +58,6 @@ class LearningPaln:
             print("\n Your Learning Plan is currently empty. Add events first to calculate the summary.")
             return
 
-      
         total_event_fees = self.calculate_total_cost()
         
         total_learning_hours = 0
