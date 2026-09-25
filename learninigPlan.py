@@ -15,7 +15,11 @@ class LearningPlan:
             if event.name.lower() == event_name:
 
                 if event not in self.user_learning_plan:
+                    if event.available_seats == 0:
+                        return f"Error: '{event.name}' all seats are complete."
                     self.user_learning_plan.append(event)
+                    event.available_seats -= 1
+                    manger.save_events_to_json()
                     print(
                         f"Success: '{event.name}' "
                         "has been added to your Learning Plan."
@@ -33,6 +37,8 @@ class LearningPlan:
         for event in self.user_learning_plan:
             if event.name.lower() == event_name.lower():
                 self.user_learning_plan.remove(event)
+                event.available_seats += 1
+                manger.save_events_to_json()
                 print(f" Success: '{event.name}' has been removed from your plan.")
                 return
         print(f" Error: '{event_name}' was not found in your learning plan.")

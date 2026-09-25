@@ -38,13 +38,35 @@ class EventManager:
                 print(f"Successfully loaded {len(self.events)} events from data store.")
             except Exception as e:
                 print(f" Error loading JSON file: {e}")
+
+    def save_events_to_json(self):
+        data = []
+        for event in self.events:
+            event_dict = {
+                "name": event.name,
+                "trainer": event.trainer,
+                "location": event.location,
+                "price": event.price,
+                "duration": event.duration,
+                "rating": event.rating,
+                "available_seats": event.available_seats,
+                "category": event.category
+            }
+            data.append(event_dict)
+
+        try:
+            with open(self.filename, 'w') as file:
+                json.dump(data, file, indent=4)
+            print(f"Successfully saved {len(self.events)} events to '{self.filename}'.")
+        except Exception as e:
+            print(f"Error saving JSON file: {e}")
                 
     def display_events(self, category_name=None): # self refer to the object that call this function
             if category_name is None:
                 events_to_display = self.events
                 title = "All Available Workshops & Events"
             else:
-                # List Comprehension create list from arealy another list
+                # List Comprehension create list from another list
                 events_to_display = [e for e in self.events if e.category.lower() == category_name.lower()]
                 title = f" Filtered Events for Category: '{category_name.capitalize()}'"
     

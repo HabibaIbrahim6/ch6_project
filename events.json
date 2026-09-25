@@ -1,62 +1,62 @@
 [
-  {
-    "name": "Python for Beginners",
-    "trainer": "Ahmed Ali",
-    "location": "Cairo",
-    "price": 500,
-    "duration": 15,
-    "rating": 4.8,
-    "available_seats": 10,
-    "category": "Programming"
-  },
-  {
-    "name": "AI & Machine Learning",
-    "trainer": "Mona Zaki",
-    "location": "Online",
-    "price": 1200,
-    "duration": 30,
-    "rating": 4.9,
-    "available_seats": 5,
-    "category": "AI"
-  },
-  {
-    "name": "Data Analysis with Pandas",
-    "trainer": "Omar Khaled",
-    "location": "Alexandria",
-    "price": 800,
-    "duration": 20,
-    "rating": 4.6,
-    "available_seats": 8,
-    "category": "Data"
-  },
-  {
-    "name": "Startup Entrepreneurship",
-    "trainer": "Tamer Hosny",
-    "location": "Cairo",
-    "price": 300,
-    "duration": 10,
-    "rating": 4.2,
-    "available_seats": 20,
-    "category": "Entrepreneurship"
-  },
-  {
-    "name": "UI/UX Design Essentials",
-    "trainer": "Salma Ahmed",
-    "location": "Online",
-    "price": 600,
-    "duration": 12,
-    "rating": 4.7,
-    "available_seats": 12,
-    "category": "Design"
-  },
-  {
-    "name": "Effective Communication",
-    "trainer": "Noha Raafat",
-    "location": "Cairo",
-    "price": 250,
-    "duration": 6,
-    "rating": 4.5,
-    "available_seats": 15,
-    "category": "Soft Skills"
-  }
+    {
+        "name": "Python for Beginners",
+        "trainer": "Ahmed Ali",
+        "location": "Cairo",
+        "price": 500,
+        "duration": 15,
+        "rating": 4.8,
+        "available_seats": 9,
+        "category": "Programming"
+    },
+    {
+        "name": "AI & Machine Learning",
+        "trainer": "Mona Zaki",
+        "location": "Online",
+        "price": 1200,
+        "duration": 30,
+        "rating": 4.9,
+        "available_seats": 5,
+        "category": "AI"
+    },
+    {
+        "name": "Data Analysis with Pandas",
+        "trainer": "Omar Khaled",
+        "location": "Alexandria",
+        "price": 800,
+        "duration": 20,
+        "rating": 4.6,
+        "available_seats": 8,
+        "category": "Data"
+    },
+    {
+        "name": "Startup Entrepreneurship",
+        "trainer": "Tamer Hosni",
+        "location": "Cairo",
+        "price": 300,
+        "duration": 10,
+        "rating": 4.2,
+        "available_seats": 20,
+        "category": "Entrepreneurship"
+    },
+    {
+        "name": "UI/UX Design Essentials",
+        "trainer": "Salma Ahmed",
+        "location": "Online",
+        "price": 600,
+        "duration": 12,
+        "rating": 4.7,
+        "available_seats": 11,
+        "category": "Design"
+    },
+    {
+        "name": "Effective Communication",
+        "trainer": "Noha Raafat",
+        "location": "Cairo",
+        "price": 250,
+        "duration": 6,
+        "rating": 4.5,
+        "available_seats": 14,
+        "category": "Soft Skills"
+    }
 ]
