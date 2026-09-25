@@ -10,5 +10,5 @@ class Event:
         self.category = category
 
     def __str__(self):
-        return f"[{self.category}] {self.name} | Trainer: {self.trainer} | Price: {self.price}EGP | Rating: {self.rating}★"
+        return f"[{self.category}] {self.name} | Trainer: {self.trainer} | Location: {self.location} | Price: {self.price}EGP | Rating: {self.rating}★ | Available Seats: {self.available_seats} | Duration: {self.duration}"
 

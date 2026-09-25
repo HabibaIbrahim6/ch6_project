@@ -1,15 +1,25 @@
+# ============================================================================
+# Imports
+# ============================================================================
+from eventManger import EventManager
+# ====================================================================================================
+manger = EventManager()
 class LearningPlan:
 
-    def __init__(self, events):
-        self.events = events
+    def __init__(self):
+        self.events = manger.events
         self.user_learning_plan = []
 
     def add_to_learning_plan(self, event_name):
         for event in self.events:
-            if event.name.lower() == event_name.lower():
+            if event.name.lower() == event_name:
 
                 if event not in self.user_learning_plan:
+                    if event.available_seats == 0:
+                        return f"Error: '{event.name}' all seats are complete."
                     self.user_learning_plan.append(event)
+                    event.available_seats -= 1
+                    manger.save_events_to_json()
                     print(
                         f"Success: '{event.name}' "
                         "has been added to your Learning Plan."
@@ -27,6 +37,8 @@ class LearningPlan:
         for event in self.user_learning_plan:
             if event.name.lower() == event_name.lower():
                 self.user_learning_plan.remove(event)
+                event.available_seats += 1
+                manger.save_events_to_json()
                 print(f" Success: '{event.name}' has been removed from your plan.")
                 return
         print(f" Error: '{event_name}' was not found in your learning plan.")
@@ -66,8 +78,8 @@ class LearningPlan:
                 hours_digits = "".join(filter(str.isdigit, str(event.duration)))
                 if hours_digits:
                     total_learning_hours += int(hours_digits)
-            except Exception:
-                pass 
+            except ValueError:
+                print("Error")
 
         total_transportation = len(self.user_learning_plan) * transportation_cost_per_event
         final_total_cost = total_event_fees + total_transportation

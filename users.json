@@ -42,5 +42,27 @@
         "national_id": "16579430247861",
         "password": "admin123",
         "role": "admin"
+    },
+    {
+        "name": "Kareem",
+        "email": "kareem@gmail.com",
+        "phone": "061729745",
+        "age": 22,
+        "gender": "male",
+        "governorate": "CAIRO",
+        "national_id": "54167942357894",
+        "password": "123456789",
+        "role": "user"
+    },
+    {
+        "name": "Mohamed",
+        "email": "mohamed@gmail.com",
+        "phone": "01248785425",
+        "age": 21,
+        "gender": "male",
+        "governorate": "ALEX",
+        "national_id": "16479435891476",
+        "password": "123456789",
+        "role": "user"
     }
 ]
